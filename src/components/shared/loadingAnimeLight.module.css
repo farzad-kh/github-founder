@@ -1,0 +1,88 @@
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+  }
+  .loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #bebcbc;
+    animation-name: pulsIn;
+  }
+  .loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #b6b6b6;
+  }
+
+
+
+
+
+
+
+  @keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #3d4451;
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #3d4451;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #3d4451;
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem #3d4451;
+      opacity: 1;
+    }
+  }
+
+      
+
+
+
+
+  .loaderThreeCircle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #393939;
+    box-shadow: 32px 0 #393939, -32px 0 #393939;
+    position: relative;
+    animation: flash 0.5s ease-out infinite alternate;
+  }
+
+  @keyframes flash {
+    0% {
+      background-color: #393939;
+      box-shadow: 32px 0 #393939, -32px 0 #d4d4d4;
+    }
+    50% {
+      background-color: #d4d4d4;
+      box-shadow: 32px 0 #393939, -32px 0 #393939;
+    }
+    100% {
+      background-color: #393939;
+      box-shadow: 32px 0 #d4d4d4, -32px 0 #393939;
+    }
+  }
+      
